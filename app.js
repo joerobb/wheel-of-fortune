@@ -22,6 +22,7 @@ mainDiv.addEventListener('click', (e) => {
 var phrases = ['Oscar Wilde', 'Roald Dahl', 'James Joyce', 'Emily Bronte', 'Sylvia Plath'];
 
 // Get random phrase function
+//This function takes an array, such as the one above, using the Math.floor and Math.random method takes one of the words in the array and then connects that game word using the split method.
 
 function getRandomPhrase(array) {
     var randomPhrase = array[Math.floor(Math.random() * array.length)];
@@ -34,6 +35,7 @@ function getRandomPhrase(array) {
 const phraseArray = getRandomPhrase(phrases);
 
 // Post random phrase to display
+//This function loops through the gameWord, creates a li item for each letter, assigns either letter or spaces as li content with respective class name.
 
 function addPhraseToDisplay(array) {
   for (var i = 0; i < array.length; i += 1) {
@@ -51,6 +53,9 @@ function addPhraseToDisplay(array) {
 addPhraseToDisplay(phraseArray);
 
 //Check if clicked letter matches
+// This function takes a letter from the key clicked on the keyboard, assigns it to the variable guess
+// It then loops through the letters and checks if the letters match the guess, if so assigns the class 'show'
+// It then returns the correct letter
 
 function checkLetter(clicked) {
   const guess = clicked.textContent;
@@ -65,6 +70,7 @@ return correctLetter;
 };
 
 //Check Win Function
+//Show here is the correct letters with the class name show.
 
 function checkWin() {
   const overlay = document.querySelector('#overlay');

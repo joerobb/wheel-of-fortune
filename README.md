@@ -1,1 +1,1 @@
-# Techdegree Project 7
+# This is a JavaScript driven game that allows a user to guess the name of a popular author by clicking on the given keyboard. This app required a lot of Dom manipulaition along side conditional programming with arrays and loops.
